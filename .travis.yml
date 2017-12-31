@@ -1,7 +1,10 @@
 language: go
 go:
-  - 1.8
+- 1.8
 deploy:
   provider: gae
-  keyfile: "YOUR SERVICE ACCOUNT JSON FILE"
-  project: "go-jawscout-cc"
+  keyfile: client-secret.json
+  project: go-jawscout-cc
+before_install:
+- openssl aes-256-cbc -K $encrypted_a67d938c51e9_key -iv $encrypted_a67d938c51e9_iv
+  -in client-secret.json.enc -out client-secret.json -d
