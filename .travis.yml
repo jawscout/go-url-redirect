@@ -1,0 +1,7 @@
+language: go
+go:
+  - 1.8
+deploy:
+  provider: gae
+  keyfile: "YOUR SERVICE ACCOUNT JSON FILE"
+  project: "go-jawscout-cc"
